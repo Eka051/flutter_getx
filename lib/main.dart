@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx/routes/app_pages.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -13,6 +14,8 @@ class FlutterGetX extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Product List',
+      initialRoute: Routes.PRODUCT,
+      getPages: AppPages.routes,
     );
   }
 }

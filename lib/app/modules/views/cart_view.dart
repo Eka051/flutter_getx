@@ -40,6 +40,17 @@ class CartView extends StatelessWidget {
               },
             ),
           ),
+          Obx(
+            () {
+              return Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  'Total: ${NumberFormat.currency(locale: 'id_ID', symbol: 'Rp. ', decimalDigits: 0).format(cartController.totalAmounts.value)}',
+                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+                ),
+              );
+            },
+          ),
         ],
       ),
     );

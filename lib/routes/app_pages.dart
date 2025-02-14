@@ -1,3 +1,4 @@
+import 'package:flutter_getx/app/modules/views/product_details_view.dart';
 import 'package:flutter_getx/app/modules/views/product_view.dart';
 import 'package:get/get.dart';
 part 'app_routes.dart';
@@ -10,7 +11,7 @@ class AppPages {
     ),
     GetPage(
       name: Routes.PRODUCT_DETAILS,
-      page: () => ProductView(),
+      page: () => ProductDetailsView(),
     ),
   ];
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/app/modules/controllers/product_controller.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class ProductView extends StatelessWidget {
   ProductView({super.key});
@@ -20,9 +21,9 @@ class ProductView extends StatelessWidget {
               final product = productController.product[index];
               return ListTile(
                 title: Text(product.name),
-                subtitle: Text('Rp. ${product.price}'),
+                subtitle: Text(NumberFormat.currency(locale: 'id_ID', symbol: 'Rp. ', decimalDigits: 0).format(product.price)),
                 onTap: () {
-                  Get.toNamed('/product-detail', arguments: product);
+                  Get.toNamed('/product-details', arguments: product);
                 },
               );
             },

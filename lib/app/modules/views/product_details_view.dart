@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/app/modules/models/product_model.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class ProductDetailsView extends StatelessWidget {
   const ProductDetailsView({super.key});
@@ -26,7 +27,9 @@ class ProductDetailsView extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             Text(
-              'Rp. ${product.price}',
+              NumberFormat.currency(
+                      locale: 'id_ID', symbol: 'Rp. ', decimalDigits: 0)
+                  .format(product.price),
               style: TextStyle(fontSize: 20),
             ),
           ],

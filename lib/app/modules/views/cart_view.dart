@@ -19,6 +19,7 @@ class CartView extends StatelessWidget {
             child: Obx(
               () {
                 return ListView.builder(
+                  itemCount: cartController.cartItems.length,
                   itemBuilder: (context, index) {
                     final item = cartController.cartItems[index];
                     return ListTile(
@@ -46,7 +47,8 @@ class CartView extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 child: Text(
                   'Total: ${NumberFormat.currency(locale: 'id_ID', symbol: 'Rp. ', decimalDigits: 0).format(cartController.totalAmounts.value)}',
-                  style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+                  style: const TextStyle(
+                      fontSize: 24, fontWeight: FontWeight.w700),
                 ),
               );
             },

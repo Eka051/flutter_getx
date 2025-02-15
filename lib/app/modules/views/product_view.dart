@@ -24,7 +24,8 @@ class ProductView extends StatelessWidget {
                 title: Text(product.name),
                 subtitle: Text(NumberFormat.currency(locale: 'id_ID', symbol: 'Rp. ', decimalDigits: 0).format(product.price)),
                 onTap: () {
-                  Get.to(ProductDetailsView(), arguments: product);
+                  Get.toNamed('/product_details', arguments: product);
+                  // Get.to(ProductDetailsView(), arguments: product);
                 },
               );
             },

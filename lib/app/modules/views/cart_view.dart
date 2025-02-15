@@ -33,7 +33,7 @@ class CartView extends StatelessWidget {
                       ),
                       trailing: IconButton(
                         onPressed: () => cartController.removeFromCart(item),
-                        icon: const Icon(Icons.remove),
+                        icon: const Icon(Icons.delete),
                       ),
                     );
                   },

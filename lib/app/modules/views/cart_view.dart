@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/app/modules/controllers/cart_controller.dart';
+import 'package:flutter_getx/routes/app_pages.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
@@ -53,6 +54,12 @@ class CartView extends StatelessWidget {
               );
             },
           ),
+          ElevatedButton(
+            onPressed: () {
+              Get.toNamed(Routes.CHECKOUT);
+            },
+            child: const Text('Process to Checkout'),
+          )
         ],
       ),
     );

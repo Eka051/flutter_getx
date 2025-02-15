@@ -59,7 +59,8 @@ class CartView extends StatelessWidget {
               Get.toNamed(Routes.CHECKOUT);
             },
             child: const Text('Process to Checkout'),
-          )
+          ),
+          const SizedBox(height: 20),
         ],
       ),
     );

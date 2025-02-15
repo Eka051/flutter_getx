@@ -10,7 +10,7 @@ class ProductDetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ProductModel product = Get.arguments;
+  final ProductModel product = Get.arguments;
 
     return Scaffold(
       appBar: AppBar(

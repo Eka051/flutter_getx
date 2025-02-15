@@ -1,4 +1,5 @@
 import 'package:flutter_getx/app/modules/views/cart_view.dart';
+import 'package:flutter_getx/app/modules/views/checkout_view.dart';
 import 'package:flutter_getx/app/modules/views/product_details_view.dart';
 import 'package:flutter_getx/app/modules/views/product_view.dart';
 import 'package:get/get.dart';
@@ -17,6 +18,10 @@ class AppPages {
     GetPage(
       name: Routes.CART,
       page: () => CartView(),
-    )
+    ),
+    GetPage(
+      name: Routes.CHECKOUT,
+      page: () => CheckoutView(),
+    ),
   ];
 }

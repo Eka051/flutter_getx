@@ -1,3 +1,4 @@
+import 'package:flutter_getx/app/bindings/cart_binding.dart';
 import 'package:flutter_getx/app/bindings/product_binding.dart';
 import 'package:flutter_getx/app/modules/views/cart_view.dart';
 import 'package:flutter_getx/app/modules/views/checkout_view.dart';
@@ -20,6 +21,7 @@ class AppPages {
     GetPage(
       name: Routes.CART,
       page: () => CartView(),
+      binding: CartBinding(),
     ),
     GetPage(
       name: Routes.CHECKOUT,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/app/modules/controllers/cart_controller.dart';
+import 'package:flutter_getx/app/modules/controllers/product_controller.dart';
 import 'package:flutter_getx/app/modules/models/product_model.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -7,6 +8,7 @@ import 'package:intl/intl.dart';
 class ProductDetailsView extends StatelessWidget {
   ProductDetailsView({super.key});
   final CartController cartController = Get.find<CartController>();
+  final ProductController productController = Get.find<ProductController>();
 
   @override
   Widget build(BuildContext context) {

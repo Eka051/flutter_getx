@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx/app/modules/controllers/product_controller.dart';
-import 'package:flutter_getx/app/modules/views/product_details_view.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
@@ -25,7 +24,6 @@ class ProductView extends StatelessWidget {
                 subtitle: Text(NumberFormat.currency(locale: 'id_ID', symbol: 'Rp. ', decimalDigits: 0).format(product.price)),
                 onTap: () {
                   Get.toNamed('/product_details', arguments: product);
-                  // Get.to(ProductDetailsView(), arguments: product);
                 },
               );
             },
